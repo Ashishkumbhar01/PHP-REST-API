@@ -8,7 +8,7 @@ include('dbcon.php');
 
 //$p_id = $data['pid'];
 
-$sql = "SELECT * FROM student";
+$sql = "SELECT * FROM contacts";
 $res = mysqli_query($con,$sql) or die("SQL Query Failed.");
 
 if(mysqli_num_rows($res) > 0){

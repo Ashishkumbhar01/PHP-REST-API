@@ -9,13 +9,12 @@ $data = json_decode(file_get_contents("php://input"), true);
 
 $id = $data['id'];
 $name = $data['name'];
-$gender = $data['gender'];
-$dob = $data['dob'];
-$country = $data['country'];
+$mobile = $data['mobile'];
+$email = $data['email'];
 
 include('dbcon.php');
 
-$sql = "UPDATE `student` SET name ='{$name}', gender = '{$gender}', dob = '{$dob}', country = '{$country}' WHERE id = {$id}";
+$sql = "UPDATE `contacts` SET name ='{$name}', mobile = '{$mobile}', email = '{$email}' WHERE id = {$id}";
 
 if(mysqli_query($con,$sql)){
 

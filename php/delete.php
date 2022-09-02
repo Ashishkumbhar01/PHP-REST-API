@@ -11,7 +11,7 @@ $id = $data['id'];
 
 include('dbcon.php');
 
-$sql = "DELETE FROM student WHERE id = {$id}";
+$sql = "DELETE FROM contacts WHERE id = {$id}";
 
 if(mysqli_query($con,$sql)){
 

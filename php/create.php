@@ -8,13 +8,12 @@ error_reporting(0);
 $data = json_decode(file_get_contents("php://input"), true);
 
 $name = $data['name'];
-$price = $data['gender'];
-$stock = $data['dob'];
-$discount = $data['country'];
+$mobile = $data['mobile'];
+$email = $data['email'];
 
 include('dbcon.php');
 
-$sql = "INSERT INTO `student`(`name`, `gender`, `dob`, `country`) VALUES ('{$name}', '{$price}', '{$stock}', '{$discount}')";
+$sql = "INSERT INTO `contacts`(`name`, `mobile`, `email`) VALUES ('{$name}', '{$mobile}', '{$email}')";
 
 if(mysqli_query($con,$sql)){
 
